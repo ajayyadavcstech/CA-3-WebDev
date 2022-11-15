@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body{
     background: linear-gradient(rgba(194, 178, 34, 0.447),
     rgba(29, 183, 129, 0.263),
@@ -20,6 +23,9 @@ body{
     overflow: hidden;
 }
 
+.pointer{
+    cursor: pointer;
+}
 .navigation {
     display: flex;
     padding: 2% 6%;

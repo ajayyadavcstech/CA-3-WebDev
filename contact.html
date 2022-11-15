@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            justify-content: center;
+        }
+        .form{
+            display: flex;
+            align-items: center;
+            padding:10px;
+            border-radius: 10px;
+            width: 400px;
+            height: 250px;
+            background-color: rgba(0, 0, 255, 0.568);
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        input{
+            background-color: rgb(194, 226, 224);
+            border-radius: 8px;
+        }
+        button{
+            padding: 8px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: rgba(43, 107, 226, 0.473);
+        }
+        #success{
+            text-align: center;
+            color: rgb(2, 40, 2);
+            font-weight: bolder;
+            display: none;
+        }
+        button{
+            cursor: pointer;
+        }
+        .pointer{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <table>
+                <tr>
+                    <td>Name : </td>
+                    <td><input class="input" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Email Id : </td>
+                    <td><input class="input" type="email"></td>
+                </tr>
+                <tr>
+                    <td>Institute Name : </td>
+                    <td><input class="input" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Contact No : </td>
+                    <td><input class="input" type="number"></td>
+                </tr>
+                <tr>
+                    <td>Cource : </td>
+                    <td><input class="input" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Gender : </td>
+                    <td><input class="input pointer" type="radio" name="gender" id="">Male <input class="input pointer" type="radio" name="gender" id="">Female</td>
+                </tr>
+            </table>
+            <button onclick="submit()"  >Submit</button>
+            <div id="success">Detail successfully Submitted. <br>We Will Contact You Soon Keep In Touch.</div>
+        </div>
+
+        <script>
+           function submit(){
+                document.getElementById("success").style.display = "block";
+                document.getElementsByName("input").innerHTML = "";
+            }
+        </script>
+    </div>
+</body>
+</html>
